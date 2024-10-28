@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  strapi:
+    image: strapi/strapi
+    restart: always
+    ports:
+      - '1337:1337'
+    environment:
+      DATABASE_CLIENT: sqlite
+      DATABASE_NAME: strapi
+    volumes:
+      - ./strapi-app:/srv/app
